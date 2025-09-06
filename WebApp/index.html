@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Entry System - IITGN</title>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .top-left-image {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 150px;
+            width: 150px;/* adjust as needed */
+        }
+
+        .top-right-image {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 100px; /* same height as logo */
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>INTELLIGENT VEHICLE IDENTIFICATION SYSTEM</h1>
+
+    <img src="logo.svg.png" alt="Logo" class="top-left-image">
+    <img src="IVIS.png" alt="IVIS" class="top-right-image">
+
+    <!-- Faculty Vehicles Section -->
+    <h2 id="facultyTitle">Faculty Vehicles</h2>
+    <table id="facultyTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Plate Number</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="deleteButtonsContainer"></div>
+
+    <h3>Add Faculty Vehicle</h3>
+    <input type="text" id="facultyName" placeholder="Faculty Name">
+    <input type="text" id="facultyPlate" placeholder="Number Plate">
+    <button id="addFacultyBtn">Add</button>
+
+    <!-- Outsider Vehicles Log -->
+    <h2 id="outsiderTitle">Outsider Vehicles Log</h2>
+    <table id="outsidersTable">
+        <thead>
+            <tr>
+                <th>Plate Number</th>
+                <th>Entry Time</th>
+                <th>Exit Time</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
